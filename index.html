@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>windows portafolio</title>
+  </head>
+  <body>
+    <main>
+      <section class="container_window">
+        <div class="container">
+          <div class="one">
+            <div class="one_div"></div>
+          </div>
+          <div class="two">
+            <div class="two_div"></div>
+          </div>
+          <div class="three">
+            <div class="three_div">
+              <div class="three_div_second"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four_div">
+              <div class="four_div_second"></div>
+            </div>
+          </div>
+          <div class="effect"></div>
+          <div class="effect_two"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="nav_bar"></section>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    --cuvo: rgba(255, 255, 255, 0.125);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  body{
+    background-color: rgb(149, 22, 22);
+    height: 100%;
+    width: 100%;
+  }
+  main {
+    background: linear-gradient(to right, rgba(111, 188, 255, 0.8), #0064b0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .container_window {
+    position: absolute;
+    right: 20%;
+  }
+  .container {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto; /* Dos columnas de tamaño automático */
+    grid-template-rows: auto auto; /* Dos filas de tamaño automático */
+    padding-top: 10px;
+    position: relative;
+  }
+  .one {
+    width: 130px;
+    height: 125px;
+    background-color: var(--cuvo);
+    border-left: 3px solid rgba(209, 233, 254, 0.8);
+    position: absolute;
+    top: 20px;
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+    filter: blur(2px); /* Aplicar desenfoque */
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+  }
+  .one_div {
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+  .two {
+    width: 160px;
+    height: 139px;
+    background-color: var(--cuvo);
+    border-right: 3px solid rgba(209, 233, 254, 0.8);
+    position: absolute;
+    top: 6px;
+    right: 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    filter: blur(2px); /* Aplicar desenfoque */
+    box-shadow: 0 0 20px 5px #ffffff; /* Agregar brillo */
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  }
+  .two_div {
+    width: 35px;
+    height: 100%;
+    border-top: 3px solid rgb(255, 255, 255);
+  }
+  .three {
+    width: 130px;
+    height: 125px;
+    background-color: var(--cuvo);
+    border-left: 3px solid rgba(209, 233, 254, 0.8);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    filter: blur(2px); /* Aplicar desenfoque */
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+    display: flex;
+    justify-content: left;
+    align-items: end;
+  }
+  .three_div {
+    position: relative;
+    width: 15px;
+    height: 100%;
+    border-bottom: 12px solid rgba(255, 255, 255, 0);
+  }
+  .three_div_second {
+    bottom: 15px;
+    position: absolute;
+    width: 170px;
+    height: 200;
+    rotate: -10deg;
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+  .four {
+    width: 160px;
+    height: 143px;
+    background-color: var(--cuvo);
+    border-right: 3px solid rgb(209, 233, 254);
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+    filter: blur(2px); /* Aplicar desenfoque */
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  }
+  .four_div {
+    position: relative;
+    width: 45px;
+    height: 100%;
+    border-bottom: 4px solid rgb(255, 255, 255);
+  }
+  .four_div_second {
+    left: -120px;
+    bottom: 65px;
+    position: absolute;
+    width: 170px;
+    height: 200;
+    rotate: -10deg;
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+  .effect {
+    top: -19.1rem;
+    right: 0;
+    position: absolute;
+    background-color: #fbfbfb0c;
+    height: 49rem;
+    width: 920rem;
+    filter: blur(100px);
+    z-index: 400;
+    clip-path: polygon(62% 0, 100% 40%, 100% 76%, 94% 100%);
+  }
+  .effect_two {
+    bottom: -2.4rem;
+    left: -49.1rem;
+    position: absolute;
+    width: 50rem;
+    height: 1px;
+    filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.329);
+    rotate: -10deg;
+  }
+  footer {
+    position: relative;
+  }
+  .nav_bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 3rem;
+    background-color:  #f0f0f0;
+  }
+</style>
