@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>windows portafolio</title>
   </head>
   <body>
@@ -31,7 +35,130 @@
       </section>
     </main>
     <footer>
-      <section class="nav_bar"></section>
+      <section class="nav_bar">
+        <div class="container_footer" id="windows_menu">
+          <div class="one_footer">
+            <div class="one_div_footer"></div>
+          </div>
+          <div class="two_footer">
+            <div class="two_div_footer"></div>
+          </div>
+          <div class="three_footer">
+            <div class="three_div_footer">
+              <div class="three_div_second_footer"></div>
+            </div>
+          </div>
+          <div class="four_footer">
+            <div class="four_div_footer">
+              <div class="four_div_second_footer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu_windows">
+          <div class="menu_info_home">
+            <ul class="menu_ul_content">
+              <li class="menu_li">
+                <i class="bx bx-menu bx-sm" style="color: #5a5a57"></i>
+                <span class="menu_li_span">INICIO</span>
+              </li>
+              <div class="content_botom">
+                <li class="menu_li fix">
+                  <i
+                    class="bx bxs-user-circle bx-sm"
+                    style="color: #5a5a57"
+                  ></i>
+                  <span class="menu_li_span">Carlos Andres M.</span>
+                </li>
+                <li class="menu_li fix">
+                  <i class="bx bx-cog bx-sm" style="color: #5a5a57"></i>
+                  <span class="menu_li_span">Configuración</span>
+                </li>
+                <li class="menu_li fix">
+                  <i class="bx bx-lock-alt bx-sm" style="color: #5a5a57"></i>
+                  <span class="menu_li_span">Bloquear</span>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="menu_content_principal">
+            <div class="principal_left">
+              <ul class="container_left">
+                <li class="container_left_li">
+                  <i class="bx bxs-folder bx-sm" style="color: #ebbc13"></i>
+                  Mis Documentos
+                </li>
+                <li class="container_left_li">
+                  <i class="bx bxs-folder bx-sm" style="color: #ebbc13"></i>
+                  Ideas 2024
+                </li>
+                <li class="container_left_li">
+                  <i class="bx bxs-folder bx-sm" style="color: #ebbc13"></i>
+                  Contraseñas
+                </li>
+                <li class="container_left_li">
+                  <i class="bx bx-calculator bx-sm" style="color: #5a5a57"></i>
+                  Calculadora
+                </li>
+              </ul>
+            </div>
+            <div class="principal_rigth">
+              <div class="rigth_one">
+                <h3 contenteditable="" class="rigth_one_title">
+                  Proyectos recientes
+                </h3>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+              <div class="rigth_two">
+                <h3 contenteditable="" class="rigth_one_title">
+                  Portafolios & Tiempo libre
+                </h3>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="folder_container" id="folder">
+          <i
+            id="mi_folder"
+            class="bx bxs-folder bx-lg"
+            style="color: #ebbc13"
+          ></i>
+          <div class="folder_container_principal" id="folderContainer">
+            <div class="nav_download">
+              <div class="nav_download_div">
+                <i class="bx bxs-downvote"></i><i class="bx bx-spreadsheet"></i
+                ><i class="bx bxs-chevrons-down"></i>
+                <i class="bx bxs-folder bx-xs" style="color: #ebbc13"></i>
+              </div>
+              <div class="nav_download_div">
+                <i class="bx bx-minus"> </i>
+                <div class="maximize_button" id="maximize_button">
+                  <i class="bx bx-checkbox"></i>
+                </div>
+                <div class="minimize_button" id="minimize_button">
+                  <i class="bx bx-checkbox-minus"></i>
+                </div>
+
+                <i id="closed_folder" class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="nav_main">
+              <div class="main_download"></div>
+              <div class="main_data"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
@@ -39,6 +166,9 @@
 <style>
   :root {
     --cuvo: rgba(255, 255, 255, 0.125);
+    --gray: rgba(41, 41, 41);
+    --blue: rgba(1, 90, 255, 0.526);
+    --textWhite: #f0f0f0;
   }
   * {
     margin: 0;
@@ -47,10 +177,11 @@
     text-decoration: none;
     list-style: none;
   }
-  body{
+  body {
     background-color: rgb(149, 22, 22);
     height: 100%;
     width: 100%;
+    overflow: hidden;
   }
   main {
     background: linear-gradient(to right, rgba(111, 188, 255, 0.8), #0064b0);
@@ -190,6 +321,7 @@
     background-color: rgba(255, 255, 255, 0.329);
     rotate: -10deg;
   }
+  /*FOOTER CSS*/
   footer {
     position: relative;
   }
@@ -197,7 +329,391 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 3rem;
-    background-color:  #f0f0f0;
+    height: 3.1rem;
+    background-color: #f0f0f0;
+    display: flex;
+  }
+  .container_footer {
+    padding: 4px;
+    display: grid;
+    width: 50px;
+    height: 3.1rem;
+    grid-template-columns: auto auto; /* Dos columnas de tamaño automático */
+    grid-template-rows: auto auto; /* Dos filas de tamaño automático */
+    position: relative;
+  }
+  .container_footer:hover {
+    background-color: #4a3e3e4b;
+  }
+  .container_footer:hover .one_footer,
+  .container_footer:hover .two_footer,
+  .container_footer:hover .three_footer,
+  .container_footer:hover .four_footer {
+    background-color: var(--blue);
+  }
+  .one_footer {
+    width: 15px;
+    height: 15px;
+    background-color: var(--gray);
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+  } /*
+  .one_div_footer {
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }*/
+  .two_footer {
+    width: 18px;
+    height: 17px;
+    background-color: var(--gray);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 0 20px 5px #ffffff; /* Agregar brillo */
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  } /*
+  .two_div_footer {
+    width: 35px;
+    height: 100%;
+    border-top: 3px solid rgb(255, 255, 255);
+  }*/
+  .three_footer {
+    width: 15px;
+    height: 15px;
+    background-color: var(--gray);
+    position: absolute;
+    bottom: 7px;
+    left: 6px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+    display: flex;
+    justify-content: left;
+    align-items: end;
+  }
+  .three_div_footer {
+    position: relative;
+    width: 15px;
+    height: 100%;
+    border-bottom: 12px solid rgba(255, 255, 255, 0);
+  } /*
+  .three_div_second_footer {
+    bottom: 15px;
+    position: absolute;
+    width: 170px;
+    height: 200;
+    rotate: -10deg;
+    border-top: 1px solid rgb(255, 255, 255);
+  }*/
+  .four_footer {
+    width: 18px;
+    height: 17px;
+    background-color: var(--gray);
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255); /* Agregar brillo */
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  } /*
+  .four_div_footer {
+    position: relative;
+    width: 45px;
+    height: 100%;
+    border-bottom: 4px solid rgb(255, 255, 255);
+  }*/ /*
+  .four_div_second_footer {
+    left: -120px;
+    bottom: 65px;
+    position: absolute;
+    width: 170px;
+    height: 200;
+    rotate: -10deg;
+    border-top: 1px solid rgb(255, 255, 255);
+  }*/
+
+  .menu_windows {
+    position: absolute;
+    width: 33.8%;
+    height: 41rem;
+    background-color: rgb(41, 41, 41);
+    top: -41rem;
+    z-index: 500;
+    display: none;
+  }
+  .menu_info_home {
+    position: absolute;
+    height: 100%;
+  }
+  .menu_info_home:hover {
+    width: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+    height: 100%;
+  }
+  .menu_info_home:hover .menu_li_span {
+    display: initial;
+    position: relative;
+  }
+  .menu_ul_content {
+    position: relative;
+    width: 100%;
+  }
+
+  .menu_ul_content .content_botom {
+    width: 16.3rem;
+    position: fixed;
+    bottom: 4rem;
+  }
+  .menu_li {
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  .menu_li:hover {
+    background-color: #f0f0f050;
+  }
+  .menu_li_span {
+    width: 100%;
+    display: none;
+    color: var(--textWhite);
+  }
+  .menu_content_principal {
+    margin-left: 2.5rem;
+    display: flex;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+  }
+  .principal_left {
+    padding: 2rem 1rem;
+    width: 40%;
+  }
+  .container_left_li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--textWhite);
+    cursor: pointer;
+  }
+  .container_left_li:hover {
+    background-color: #f0f0f050;
+  }
+  .principal_rigth {
+    width: 60%;
+  }
+  .rigth_one {
+    position: relative;
+    padding: 3rem 1rem;
+    display: grid;
+    width: 100%;
+    height: 50%;
+    grid-template-columns: auto auto auto; /* Dos columnas de tamaño automático */
+    grid-template-rows: auto auto auto; /* Dos filas de tamaño automático */
+  }
+  .rigth_one .rigth_one_title {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: var(--textWhite);
+  }
+  .rigth_one .item {
+    width: 95%;
+    height: 6.5rem;
+    background-color: rgba(254, 218, 218, 0.631);
+  }
+  .rigth_two {
+    position: relative;
+    padding: 3rem 1rem;
+    display: grid;
+    width: 100%;
+    height: 50%;
+    grid-template-columns: auto auto auto; /* Dos columnas de tamaño automático */
+    grid-template-rows: auto auto auto; /* Dos filas de tamaño automático */
+  }
+
+  .rigth_two .rigth_one_title {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: var(--textWhite);
+  }
+  .rigth_two .item {
+    width: 95%;
+    height: 6.5rem;
+    background-color: rgba(254, 218, 218, 0.631);
+  }
+  /*Folder*/
+  .folder_container {
+    position: relative;
+    width: 50px;
+    height: 3.1rem;
+  }
+  .folder_container:hover {
+    background-color: #4a3e3e4b;
+  }
+
+  .folder_container_principal {
+    z-index: 601;
+    position: absolute;
+    bottom: 10.7rem;
+    left: 32rem;
+    width: 68vh;
+    height: 70vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    display: none;
+  }
+  .minimize_button {
+    display: none;
+    padding: 1px;
+    height: 1rem;
+  }
+  .maximize_button {
+    display: block;
+    padding: 1px;
+    height: 1rem;
+  }
+  .nav_download {
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+    justify-content: space-between;
+    padding: 0.5rem;
+    height: 4rem;
+  }
+  .nav_download_div {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
   }
 </style>
+
+<script>
+  // Función para entrar al modo de pantalla completa
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+  // Event listener para activar el modo de pantalla completa cuando se hace doble clic en la página
+  document.addEventListener("dblclick", function () {
+    toggleFullscreen();
+  });
+
+  const folderContainer = document.getElementById("folderContainer");
+  let isDragging = false;
+  let startX, startY, startLeft, startTop;
+
+  function startDragging(event) {
+    isDragging = true;
+    startX = event.clientX;
+    startY = event.clientY;
+    startLeft = parseInt(window.getComputedStyle(folderContainer).left);
+    startTop = parseInt(window.getComputedStyle(folderContainer).top);
+  }
+
+  function drag(event) {
+    if (isDragging) {
+      const offsetX = event.clientX - startX;
+      const offsetY = event.clientY - startY;
+      folderContainer.style.left = startLeft + offsetX + "px";
+      folderContainer.style.top = startTop + offsetY + "px";
+    }
+  }
+
+  function stopDragging() {
+    isDragging = false;
+  }
+
+  folderContainer.addEventListener("mousedown", startDragging);
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("mouseup", stopDragging);
+
+  let maxMin = false;
+  const maximizeButton = document.getElementById("maximize_button");
+  const minimizeButton = document.getElementById("minimize_button");
+
+  maximizeButton.addEventListener("click", function () {
+    // Ocupa todo el ancho y alto de la pantalla
+    folderContainer.style.width = "100vw";
+    folderContainer.style.height = "100vh";
+    // Coloca el elemento en la esquina superior izquierda
+    folderContainer.style.bottom = "0";
+    folderContainer.style.left = "-3.1rem";
+    maxMin = true;
+
+    // Muestra el botón de minimizar y oculta el botón de maximizar
+    minimizeButton.style.display = "flex";
+    maximizeButton.style.display = "none";
+  });
+
+  minimizeButton.addEventListener("click", function () {
+    // Oculta el botón de minimizar y muestra el botón de maximizar
+    minimizeButton.style.display = "none";
+    maximizeButton.style.display = "flex";
+    folderContainer.style.width = "68vh";
+    folderContainer.style.height = "70vh";
+    // Coloca el elemento en la esquina inferior izquierda
+    folderContainer.style.bottom = "10.7rem";
+    folderContainer.style.left = "32rem";
+    maxMin = false; // Asegúrate de actualizar maxMin cuando se minimiza
+  });
+  const windowsMenuBtn = document.getElementById("windows_menu");
+  const menuWindows = document.getElementsByClassName("menu_windows")[0];
+  let active = false;
+  // Event listener para cerrar el menú cuando se hace clic en cualquier parte del documento
+  document.addEventListener("click", function (event) {
+    // Verifica si el clic no ocurrió dentro del botón ni del menú
+    if (
+      !windowsMenuBtn.contains(event.target) &&
+      !menuWindows.contains(event.target)
+    ) {
+      menuWindows.style.display = "none";
+      active = false;
+    }
+  });
+  windowsMenuBtn.addEventListener("click", function () {
+    if (active === false) {
+      menuWindows.style.display = "flex";
+      active = true;
+    } else {
+      menuWindows.style.display = "none";
+      active = false;
+    }
+  });
+  const closedFolder = document.getElementById("closed_folder");
+  const folder = document.getElementById("mi_folder");
+  activeFolder = false;
+  closedFolder.addEventListener("click", function () {
+    console.log("click folder closed");
+    folderContainer.style.display = "none";
+  });
+  folder.addEventListener("click", function () {
+    if (activeFolder === false) {
+      folderContainer.style.display = "flex";
+      activeFolder = true;
+    } else {
+      folderContainer.style.display = "none";
+      activeFolder = false;
+    }
+  });
+</script>
