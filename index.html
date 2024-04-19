@@ -134,22 +134,66 @@
             style="color: #ebbc13"
           ></i>
           <div class="folder_container_principal" id="folderContainer">
-            <div class="nav_download">
-              <div class="nav_download_div">
-                <i class="bx bxs-downvote"></i><i class="bx bx-spreadsheet"></i
-                ><i class="bx bxs-chevrons-down"></i>
-                <i class="bx bxs-folder bx-xs" style="color: #ebbc13"></i>
-              </div>
-              <div class="nav_download_div">
-                <i class="bx bx-minus"> </i>
-                <div class="maximize_button" id="maximize_button">
-                  <i class="bx bx-checkbox"></i>
+            <div class="conatainer_nav_header">
+              <div class="nav_download">
+                <div class="nav_download_div">
+                  <i class="bx bxs-downvote" style="color: #1321eb"></i>|<i
+                    class="bx bx-spreadsheet"
+                  ></i
+                  >|<i class="bx bxs-chevrons-down"></i>|
+                  <i class="bx bxs-folder bx-xs" style="color: #ebbc13"></i>|
+                  <span>Descargas</span>
                 </div>
-                <div class="minimize_button" id="minimize_button">
-                  <i class="bx bx-checkbox-minus"></i>
-                </div>
+                <div class="nav_download_div">
+                  <i class="bx bx-minus"> </i>
+                  <div class="maximize_button" id="maximize_button">
+                    <i class="bx bx-checkbox"></i>
+                  </div>
+                  <div class="minimize_button" id="minimize_button">
+                    <i class="bx bx-checkbox-minus"></i>
+                  </div>
 
-                <i id="closed_folder" class="bx bx-x"></i>
+                  <i id="closed_folder" class="bx bx-x"></i>
+                </div>
+              </div>
+              <div class="container_ul_header">
+                <ul class="container_ul_header_ul">
+                  <li class="header_li blue">Archivo</li>
+                  <li class="header_li">Inicio</li>
+                  <li class="header_li ">Compartir</li>
+                  <li class="header_li">Vista</li>
+                </ul>
+              </div>
+              <div class="container_header_bottom">
+                <div class="container_bottom_incons_one">
+                  <i class="bx bx-left-arrow-alt"></i
+                  ><i class="bx bx-right-arrow-alt"></i
+                  ><i class="bx bx-chevron-down"></i
+                  ><i class="bx bx-up-arrow-alt"></i>
+                </div>
+                <div class="container_bottom_icnos_two">
+                  <div class="icons_bottom_two_container_one">
+                    <i class="bx bxs-downvote" style="color: #1321eb"></i
+                    ><i class="bx bx-chevron-right"></i><span>Este equipo</span
+                    ><i class="bx bx-chevron-right"></i><span>Descargas</span>
+                  </div>
+
+                  <div class="icons_bottom_two_container_two">
+                    <i class="bx bx-chevron-down"></i
+                    ><i class="bx bx-revision"></i>
+                  </div>
+                </div>
+                <div class="container_bottom_three">
+                  <label for="buscar">
+                    <input
+                      id="buscar"
+                      name="buscar"
+                      type="text"
+                      placeholder="Buscar en Descargas"
+                    />
+                    <i class="bx bx-search bx-flip-horizontal"></i>
+                  </label>
+                </div>
               </div>
             </div>
             <div class="nav_main">
@@ -169,6 +213,7 @@
     --gray: rgba(41, 41, 41);
     --blue: rgba(1, 90, 255, 0.526);
     --textWhite: #f0f0f0;
+    --borderV: 1px solid rgba(172, 172, 172, 0.667);
   }
   * {
     margin: 0;
@@ -588,18 +633,66 @@
     padding: 1px;
     height: 1rem;
   }
+  .conatainer_nav_header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .container_ul_header {
+    width: 100%;
+  }
+  .container_ul_header_ul {
+    display: flex;
+    width: 100%;
+    border-bottom: var(--borderV);
+  }
+  .container_header_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  .container_bottom_incons_one{
+    display: flex;
+    gap: 8px;
+  }
+  .container_bottom_icnos_two{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    border: var(--borderV);
+  }
+
+  .header_li {
+    display: flex;
+    padding: 5px;
+    border: solid 1px transparent;
+    cursor: default;
+  }
+  .header_li:hover {
+    border: 1px solid white;
+  }
+  .blue {
+    background-color: #2e60f7;
+    color: var(--textWhite);
+    border: 1px solid white;
+  }
   .nav_download {
     display: flex;
     width: 100%;
-    background-color: aqua;
     justify-content: space-between;
-    padding: 0.5rem;
-    height: 4rem;
+    padding: 0rem 1rem;
+    height: 2rem;
   }
+
   .nav_download_div {
     display: flex;
     gap: 0.5rem;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 
