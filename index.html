@@ -197,7 +197,23 @@
               </div>
             </div>
             <div class="nav_main">
-              <div class="main_download"></div>
+              <div class="main_download">
+                <ul class="main_download_ul">
+                  <li class="main_download_ul_li"><i class='bx bx-chevron-right' style='color:#848585'  ></i><i class='bx bxs-star' style='color:#00bdff'  ></i> Acceso rápido</li>
+                  <li class="main_download_ul_li"><i class='bx bx-chevron-right' style='color:#848585'  ></i><i class='bx bxs-cloud' style='color:#00bdff' ></i> OneDrive - Personal</li>
+                  <li class="main_download_ul_li"><i class='bx bx-chevron-down' style='color:#000000' ></i><i class='bx bx-laptop' style='color:#00bdff' ></i> Este equipo</li>
+                </ul>
+                <div class="container_main_download">
+                  <ul class="container_main_download_ul">
+                    <li class="container_download_li">Descargas</li>
+                    <li class="container_download_li">Documentos</li>
+                    <li class="container_download_li">Escritorio</li>
+                    <li class="container_download_li">Imagenes</li>
+                    <li class="container_download_li">Musica</li>
+                    <li class="container_download_li">Videos</li>
+                  </ul>
+                </div>
+              </div>
               <div class="main_data"></div>
             </div>
           </div>
@@ -622,6 +638,7 @@
     background-color: #f0f0f0;
     overflow: hidden;
     display: none;
+    flex-direction: column;
   }
   .minimize_button {
     display: none;
@@ -693,6 +710,31 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
+  }
+  .nav_main{
+    background-color: #1321eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .main_download{
+    width: 30%;
+    height: 100%;
+    padding: 7px;
+    background-color: #ebbc13;
+  }
+  .main_data{
+    width: 70%;
+    height: 100%;
+    background-color: red;
+  }
+  .container_main_download{
+    padding: 0px 10px;
+  }
+  .container_main_download_ul{
+    padding-left: 10px;
   }
 </style>
 
